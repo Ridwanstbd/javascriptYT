@@ -1,5 +1,6 @@
 //! cara untuk membuat object pada javascript
 //! 1. Object Literal
+// ? PROBLEM : TIDAK EFEKTIF UNTUK OBJECT YANG BANYAK
 // let mahasiswa = {
 //     nama : 'ridwan',
 //     energy : 10,
@@ -9,22 +10,34 @@
 //     }
 // }
 //! 2. function Declaration
-// function mhs(namalengkap,energi) {
-//     let mhsiswa = {}
-//     mhsiswa.namalengkap = namalengkap
-//     mhsiswa.energi = energi
+//? Solusi Problem dari literal dengan mengisi method ke dalam variabel
+// ? PROBLEM : jika membuat method baru harus di daftarkan dan disambungkan
 
-//     mhsiswa.makan = function(porsi){
-//         this.energi += porsi
-//         console.log(`halo ${this.namalengkap}, selamat makan!`)
-//     }
-//     mhsiswa.main = function(jam){
-//         this.energi -= jam
-//         console.log(`Halo ${this.namalengkap}, selamat bermain`)
-//     }
-//     return mhsiswa
-// }
-// let ridwan = mhs('ridwan',20)
+const methodMhs ={
+    makan : function(porsi){
+        this.energi += porsi
+        console.log(`halo ${this.namalengkap}, selamat makan!`)
+    },
+    main : function(jam){
+        this.energi -= jam
+        console.log(`Halo ${this.namalengkap}, selamat bermain`)
+    },
+    tidur : function(jam){
+        this.energi += jam*2
+        console.log(`halo ${this.nama}, selamat tidur!`)
+    }
+};
+function mhs1(namalengkap,energi) {
+    let mhsiswa = {}
+    mhsiswa.namalengkap = namalengkap
+    mhsiswa.energi = energi
+    mhsiswa.makan = methodMhs.makan
+    mhsiswa.main = methodMhs.main
+    mhsiswa.tidur = methodMhs.tidur//!Problem
+
+    return mhsiswa
+}
+let dodi = mhs1('ridwan',20)
 //! 3. Construction function (keyword : new)
 function mhs(namalengkap,energi) {
     this.namalengkap = namalengkap
@@ -40,4 +53,3 @@ function mhs(namalengkap,energi) {
     }
 }
 let ridwan = new mhs('ridwan',20)
-//! 4. Object.create
