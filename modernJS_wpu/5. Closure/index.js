@@ -21,3 +21,18 @@ let SelamatSore = ucapkanSalam('Sore')
 
 SelamatPagi('ridwan')
 console.dir(SelamatSore('ridwan'))
+
+//! automasi untuk menjalankan closure
+//? function dibungkus dengan imediately invoke function
+let add = (function () {
+    let counter = 0  //? private variabel
+    return function () {
+        return ++counter
+    }
+})()
+counter = 100
+//! menjalankan automasi tanpa menganggu variabel di baris 33
+console.log(add())
+console.log(add())
+console.log(add())
+console.log(add())
