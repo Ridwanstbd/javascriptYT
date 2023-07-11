@@ -1,5 +1,5 @@
 function init() {
-    function tampilNama(nama) { //? inner function (closure*)
+    return function (nama) { //? inner function (closure*)
         console.log(nama) //? akses ke parameter
     }
     return tampilNama
