@@ -5,6 +5,7 @@ function init() {
         console.log(nama) //? akses ke parent variable
         console.log(umur)
     }
-    console.dir(tampilNama)
+    return tampilNama
 }
-init()
+let panggilNama = init()
+panggilNama()
