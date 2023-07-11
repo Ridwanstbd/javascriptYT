@@ -29,8 +29,8 @@ let add = (function () {
     return function () {
         return ++counter
     }
-})()
-counter = 100
+}())
+let counter = 100
 //! menjalankan automasi tanpa menganggu variabel di baris 33
 console.log(add())
 console.log(add())
