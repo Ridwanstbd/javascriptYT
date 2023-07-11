@@ -1,11 +1,8 @@
 function init() {
-    let nama = "Ridwan" //? local variable
-    let umur = 33
-    function tampilNama() { //? inner function (closure*)
-        console.log(nama) //? akses ke parent variable
-        console.log(umur)
+    function tampilNama(nama) { //? inner function (closure*)
+        console.log(nama) //? akses ke parameter
     }
     return tampilNama
 }
 let panggilNama = init()
-panggilNama()
+panggilNama('Ridwan') //? isi parameter
