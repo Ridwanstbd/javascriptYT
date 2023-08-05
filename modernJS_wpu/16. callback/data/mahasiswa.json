@@ -1,0 +1,23 @@
+[
+    {
+        "nama" : "Ridwan Setio",
+        "nim" : "2205101005",
+        "email" : "ridwansetiobudi77@gmail.com",
+        "jurusan" : "Teknik Informatika",
+        "idDosenWali" : 1 
+    },
+    {
+        "nama" : "Hadis Listyo",
+        "nim" : "2205101006",
+        "email" : "saintXceed799@gmail.com",
+        "jurusan" : "Teknik Informatika",
+        "idDosenWali" : 2
+    },
+    {
+        "nama" : "Hafizh Syakur",
+        "nim" : "2205101009",
+        "email" : "hafizhskuy99@gmail.com",
+        "jurusan" : "Teknik Informatika",
+        "idDosenWali" : 3
+    }
+]
